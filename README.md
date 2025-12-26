@@ -9,13 +9,15 @@ Este repositório documenta a implementação de um pipeline **ETL (Extract, Tra
 
 O objetivo central foi replicar a lógica de negócios de uma arquitetura corporativa de Big Data, porém adaptando-a para um cenário de **custo zero** e infraestrutura efêmera, demonstrando capacidade de abstração e engenharia de software.
 
+Veja como ficou o resultado final: https://lookerstudio.google.com/reporting/5ee24cf9-af6c-4350-a7c9-bab3ef5927ed
+
 ---
 
 ## 🏗️ Arquitetura: Da Nuvem Enterprise para a Solução "Smart"
 
 A base teórica deste projeto vem de uma arquitetura clássica de Streaming na AWS. O desafio foi substituir componentes pagos por soluções eficientes em código Python.
 
-### 1. O Modelo Original (AWS Enterprise - Custo Elevado) 💸
+### 1. O Modelo Original (AWS Enterprise)
 Baseado na arquitetura de referência corporativa, o fluxo original utilizava recursos com cobrança por hora/disponibilidade:
 * **Ingestão:** `API Gateway` + `Lambda Producer`
 * **Broker de Mensagens:** `Amazon Kinesis Data Streams` (Custo fixo alto por shard)
@@ -23,7 +25,7 @@ Baseado na arquitetura de referência corporativa, o fluxo original utilizava re
 * **Catálogo:** `AWS Glue Data Catalog`
 * **Orquestração:** `CloudWatch Events`
 
-### 2. A Solução Implementada (Serverless Gratuito) 🚀
+### 2. A Solução Implementada (Serverless)
 Refatorei a arquitetura mantendo os princípios de Engenharia de Dados (Desacoplamento, Resiliência e Idempotência), mas alterando a tecnologia para custo zero:
 
 | Função | Componente AWS (Original) | Solução "Github Codespace e Google Looker" (Atual) |
@@ -44,7 +46,7 @@ Refatorei a arquitetura mantendo os princípios de Engenharia de Dados (Desacopl
 * **Orquestração:** Script Python Modular (`main.py`)
 * **Visualização:** Google Sheets e Google Looker Studio
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Pré-requisitos
 * Conta no GitHub (Gratuita)
