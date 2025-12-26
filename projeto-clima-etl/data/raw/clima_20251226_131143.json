@@ -1,0 +1,33 @@
+{
+    "data": {
+        "time": "2025-12-26T13:11:00Z",
+        "values": {
+            "altimeterSetting": 1017.54,
+            "cloudBase": null,
+            "cloudCeiling": null,
+            "cloudCover": 64,
+            "dewPoint": 21.2,
+            "freezingRainIntensity": 0,
+            "humidity": 55,
+            "precipitationProbability": 0,
+            "pressureSeaLevel": 1014.35,
+            "pressureSurfaceLevel": 923.92,
+            "rainIntensity": 0,
+            "sleetIntensity": 0,
+            "snowIntensity": 0,
+            "temperature": 31.3,
+            "temperatureApparent": 34.3,
+            "uvHealthConcern": 3,
+            "uvIndex": 10,
+            "visibility": 16,
+            "weatherCode": 1102,
+            "windDirection": 286,
+            "windGust": 1.5,
+            "windSpeed": 1
+        }
+    },
+    "location": {
+        "lat": -23.5505,
+        "lon": -46.6333
+    }
+}

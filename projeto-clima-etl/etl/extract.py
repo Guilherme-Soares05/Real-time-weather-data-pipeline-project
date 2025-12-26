@@ -1,6 +1,6 @@
 import os
 import json
-import requests  # A biblioteca que faz o papel do "Navegador"
+import requests  # Solicita os dados a API
 from datetime import datetime
 from dotenv import load_dotenv  # Segurança para carregar senhas
 
@@ -21,15 +21,14 @@ def extrair_dados_clima():
         print("ERRO: Variáveis de ambiente (API KEY ou LOCATION) não encontradas no .env")
         return None
 
-    # 2. Montagem da Requisição (A URL é como o endereço de entrega)
-    # Estamos pedindo dados "realtime" (tempo real)
+    # 2. Solicita os dados em Realtime
     url = f"https://api.tomorrow.io/v4/weather/realtime?location={location}&apikey={api_key}"
     headers = {"accept": "application/json"}
 
     try:
         print(f"🔄 Conectando a API Tomorrow.io para a localização: {location}...")
         
-        # 3. A Chamada (O "Enter" no navegador)
+        # 3. Requisição
         response = requests.get(url, headers=headers)
 
         # 4. Validação (O HTTP 200 é sucesso. 401 é senha errada. 429 é limite estourado)
@@ -45,7 +44,7 @@ def extrair_dados_clima():
 
         # Abre o arquivo em modo de escrita ('w') e salva o JSON
         with open(caminho_arquivo, 'w') as f:
-            json.dump(dados, f, indent=4) # indent=4 deixa o arquivo bonitinho para ler
+            json.dump(dados, f, indent=4)
 
         print(f"✅ Sucesso! Dados brutos salvos em: {caminho_arquivo}")
         return dados
@@ -56,7 +55,8 @@ def extrair_dados_clima():
         print(f"❌ Erro Genérico: {e}")
     
     return None
-
+"""
 # Este bloco 'if' permite testar este arquivo isoladamente
 if __name__ == "__main__":
     extrair_dados_clima()
+"""    

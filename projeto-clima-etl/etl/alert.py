@@ -1,10 +1,9 @@
 import json
 
 # Definição dos Gatilhos (Thresholds)
-# No futuro, isso poderia vir de um arquivo de configuração ou banco de dados
-LIMITE_TEMPERATURA_ALTA = 30.0  # Graus Celsius
-LIMITE_TEMPERATURA_BAIXA = 10.0 # Graus Celsius
-LIMITE_CHUVA = 70.0             # Porcentagem
+LIMITE_TEMPERATURA_ALTA = 30.0 
+LIMITE_TEMPERATURA_BAIXA = 10.0 
+LIMITE_CHUVA = 70.0 
 
 def verificar_alerta(dados_json):
     """
@@ -12,7 +11,7 @@ def verificar_alerta(dados_json):
     Input: JSON bruto da API (igual ao extract.py)
     """
     try:
-        # Extraindo apenas o necessário para decisão
+        # Selecionando os dados que quero:
         valores = dados_json['data']['values']
         
         temp_atual = valores.get('temperature')
@@ -36,7 +35,7 @@ def verificar_alerta(dados_json):
             msg = f"☔ ALERTA DE CHUVA: Probabilidade de chuva é de {chuva_prob}%."
             alertas.append(msg)
 
-        # Disparador (O Output)
+        # Disparador (A saída)
         if alertas:
             print("\n" + "="*40)
             print("🚨 ATENÇÃO: SISTEMA DE EMERGÊNCIA CLIMÁTICA 🚨")
@@ -54,7 +53,7 @@ def verificar_alerta(dados_json):
     except Exception as e:
         print(f"❌ Erro ao processar alertas: {e}")
         return False
-
+"""
 # Bloco de Teste Simulado
 if __name__ == "__main__":
     # Vamos criar um dado FAKE para testar se o alerta dispara
@@ -75,3 +74,4 @@ if __name__ == "__main__":
     print("\n🧪 Testando com dados simulados NORMAIS:")
     dado_fake_normal = {"data": {"values": {"temperature": 22, "precipitationProbability": 0}}}
     verificar_alerta(dado_fake_normal)
+    """
