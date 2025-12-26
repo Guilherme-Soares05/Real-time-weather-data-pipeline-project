@@ -1,29 +1,29 @@
 {
     "data": {
-        "time": "2025-12-26T02:42:00Z",
+        "time": "2025-12-26T02:54:00Z",
         "values": {
-            "altimeterSetting": 1016.79,
+            "altimeterSetting": 1016.94,
             "cloudBase": 1.2,
             "cloudCeiling": 14.8,
             "cloudCover": 87,
-            "dewPoint": 19.3,
+            "dewPoint": 19.4,
             "freezingRainIntensity": 0,
             "humidity": 68,
             "precipitationProbability": 100,
             "pressureSeaLevel": 1013.66,
-            "pressureSurfaceLevel": 925.64,
-            "rainIntensity": 0.49,
+            "pressureSurfaceLevel": 925.72,
+            "rainIntensity": 0.43,
             "sleetIntensity": 0,
             "snowIntensity": 0,
-            "temperature": 25.7,
-            "temperatureApparent": 25.7,
+            "temperature": 25.8,
+            "temperatureApparent": 25.8,
             "uvHealthConcern": 0,
             "uvIndex": 0,
             "visibility": 10,
             "weatherCode": 4000,
             "windDirection": 311,
-            "windGust": 1.6,
-            "windSpeed": 1.4
+            "windGust": 1.4,
+            "windSpeed": 1.2
         }
     },
     "location": {

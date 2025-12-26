@@ -38,7 +38,7 @@ def sincronizar_git():
     try:
         # Configurações básicas (caso o codespace tenha esquecido quem é você)
         # Substitua pelo seu e-mail se quiser, ou deixe genérico
-        os.system('git config --global user.email "zoologui86@gmail.com"')
+        os.system('git config --global user.email "Informar o e-mail"')
         os.system('git config --global user.name "Bot Clima Codespace"')
 
         # Adiciona apenas o arquivo de histórico (a pasta raw ignoramos pois é pesada/suja)

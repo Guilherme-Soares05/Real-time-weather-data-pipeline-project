@@ -49,17 +49,4 @@ def transformar_dados(dados_json):
     except Exception as e:
         print(f"❌ Erro na Transformação: {e}")
         return False
-
-# Bloco de teste local
-if __name__ == "__main__":
-    # Truque para testar: Pega o arquivo mais recente da pasta Raw
-    lista_arquivos = glob.glob('data/raw/*.json')
-    if lista_arquivos:
-        ultimo_arquivo = max(lista_arquivos, key=os.path.getctime)
-        print(f"🧪 Testando transformação com o arquivo: {ultimo_arquivo}")
         
-        with open(ultimo_arquivo, 'r') as f:
-            dados_teste = json.load(f)
-            transformar_dados(dados_teste)
-    else:
-        print("⚠️ Nenhum arquivo encontrado em data/raw/ para testar.")
